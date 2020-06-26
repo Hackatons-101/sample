@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <title>OtakuTales - Crave Anime</title>
+    <link rel="stylesheet" href="style.css">
+    <script src="https://code.jquery.com/jquery-3.4.1.js"></script>
+    <script src="https://kit.fontawesome.com/a076d05399.js"></script>
+  </head>
+  <body>
+    <div class="btn">
+      <span class="fas fa-bars"></span>
+    </div>
+<nav class="sidebar">
+      <div class="text">
+OtakuTales</div>
+<ul>
+
+  <li class="active"><a href="#">HOME</a></li>
+  <li><a href="#">BLOG</a></li>
+  <li><a href="#">FORUM</a></li>
+  <li><a href="#">WATCH ANIME</a></li>
+  <li><a href="#">FAN FICTION</a></li>
+  <li><a href="#">READ MANGA</a></li>
+  <li><a href="#">LOGIN</a></li>
+  <li><a href="#">REGISTER</a></li>
+  <li>
+    <a href="#" class="feat-btn">PROFILE
+      <span class="fas fa-caret-down first"></span>
+    </a>
+    
+    <ul class="feat-show">
+      <li><a href="#">USER</a></li>
+      <li><a href="#">ACCOUNT</a></li>
+      <li><a href="#">ADD NEW POST</a></li>
+      <li><a href="#">LOG OUT</a></li>
+    </ul>
+  </li>
+
+</ul>
+</nav>
+<!--- Home Page Design here -->
+<script>
+    $('.btn').click(function(){
+      $(this).toggleClass("click");
+      $('.sidebar').toggleClass("show");
+    });
+      $('.feat-btn').click(function(){
+        $('nav ul .feat-show').toggleClass("show");
+        $('nav ul .first').toggleClass("rotate");
+      });
+      $('.serv-btn').click(function(){
+        $('nav ul .serv-show').toggleClass("show1");
+        $('nav ul .second').toggleClass("rotate");
+      });
+      $('nav ul li').click(function(){
+        $(this).addClass("active").siblings().removeClass("active");
+      });
+    </script>
+
+  </body>
+</html>
