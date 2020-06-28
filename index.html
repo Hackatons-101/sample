@@ -1,191 +1,96 @@
 <!DOCTYPE html>
 <html lang="en" dir="ltr">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <script
+    type="text/javascript"
+    src="https://cdn.weglot.com/weglot.min.js"
+  ></script>
+  <script>
+    Weglot.initialize({
+      api_key: "wg_6595b397394b082513ae5269c8992a3d7",
+    });
+  </script>
+
   <head>
-      
-    <style>
-      @import url("https://fonts.googleapis.com/css?family=Exo:400,700");
-
-      * {
-        margin: 0px;
-        padding: 0px;
-      }
-
-      body {
-        font-family: "Exo", sans-serif;
-      }
-
-      .context {
-        width: 100%;
-        position: absolute;
-        top: 50vh;
-      }
-
-      .context h1 {
-        text-align: center;
-        color: #fff;
-        font-size: 50px;
-      }
-
-      .area {
-        background: #1f2833;
-        background: -webkit-linear-gradient(to left, #C5c6c7, #d8d8da);
-        width: 100%;
-        height: 100vh;
-      }
-
-      .circles {
-        position: absolute;
-        top: 0;
-        left: 0;
-        width: 100%;
-        height: 100%;
-        overflow: hidden;
-      }
-
-      .circles li {
-        position: absolute;
-        display: block;
-        list-style: none;
-        width: 20px;
-        height: 20px;
-        background: rgba(255, 255, 255, 0.2);
-        animation: animate 25s linear infinite;
-        bottom: -150px;
-      }
-
-      .circles li:nth-child(1) {
-        left: 25%;
-        width: 80px;
-        height: 80px;
-        animation-delay: 0s;
-      }
-
-      .circles li:nth-child(2) {
-        left: 10%;
-        width: 20px;
-        height: 20px;
-        animation-delay: 2s;
-        animation-duration: 12s;
-      }
-
-      .circles li:nth-child(3) {
-        left: 70%;
-        width: 20px;
-        height: 20px;
-        animation-delay: 4s;
-      }
-
-      .circles li:nth-child(4) {
-        left: 40%;
-        width: 60px;
-        height: 60px;
-        animation-delay: 0s;
-        animation-duration: 18s;
-      }
-
-      .circles li:nth-child(5) {
-        left: 65%;
-        width: 20px;
-        height: 20px;
-        animation-delay: 0s;
-      }
-
-      .circles li:nth-child(6) {
-        left: 75%;
-        width: 110px;
-        height: 110px;
-        animation-delay: 3s;
-      }
-
-      .circles li:nth-child(7) {
-        left: 35%;
-        width: 150px;
-        height: 150px;
-        animation-delay: 7s;
-      }
-
-      .circles li:nth-child(8) {
-        left: 50%;
-        width: 25px;
-        height: 25px;
-        animation-delay: 15s;
-        animation-duration: 45s;
-      }
-
-      .circles li:nth-child(9) {
-        left: 20%;
-        width: 15px;
-        height: 15px;
-        animation-delay: 2s;
-        animation-duration: 35s;
-      }
-
-      .circles li:nth-child(10) {
-        left: 85%;
-        width: 150px;
-        height: 150px;
-        animation-delay: 0s;
-        animation-duration: 11s;
-      }
-
-      @keyframes animate {
-        0% {
-          transform: translateY(0) rotate(0deg);
-          opacity: 1;
-          border-radius: 0;
-        }
-
-        100% {
-          transform: translateY(-1000px) rotate(720deg);
-          opacity: 0;
-          border-radius: 50%;
-        }
-      }
-    </style>
-
     <meta charset="utf-8" />
 
-   
-    <link rel="stylesheet" href="homegrid.css" />
-    <script src="https://code.jquery.com/jquery-3.4.1.js"></script>
-    <script src="https://kit.fontawesome.com/a076d05399.js"></script>
-  </head>
+    <link rel="stylesheet" href="./navbar/nav.css" />
+    <nav>
+      <ul>
+        <li class="active"><a href="../index.html">HOME</a></li>
+        <li><a href="../features/features.html">FEATURES</a></li>
 
-  <body>
-    <div class="area">
-      <ul class="circles">
-        <li></li>
-        <li></li>
-        <li></li>
-        <li></li>
-        <li></li>
-        <li></li>
-        <li></li>
-        <li></li>
-        <li></li>
-        <li></li>
+        <li><a href="join.html">JOIN</a></li>
       </ul>
-   
-         
+    </nav>
+    <style>
+      .btn {
+        height: 10rem;
+        background-color: #45a29e;
+        border-radius: 20%;
+        width: 11rem;
+        border: azure;
+        text-align: center;
+      }
 
-    <body>
-      <br />
+      .background {
+        background-color: #1f2833;
+      }
+
+      .cntr {
+        text-align: center;
+      }
+      .translator {
+        text-align: center;
+        width: 100%;
+      }
+      p {
+        text-align: center;
+        color: white;
+        font-size: 1.5rem;
+        font-family: "Century Gothic", sans-serif;
+        font-weight: 500;
+        text-shadow: black;
+      }
+    </style>
+  </head>
+  <body>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="viewport" content="height=device-height, initial-scale=1.0" />
+    <link rel="stylesheet" href="homegrid.css" />
+
+    <div class="background-wrap"></div>
+
+    <br />
+    <div class="cntr">
+      <img src="./img/translate.png" width="50%" />
+    </div>
+    <br />
+
+    <div class="translator">
+      <button class="btn" :hover ::before>
+        <div id="weglot_here"></div>
+      </button>
+    </div>
+    <br />
+    <div class="background">
       <div class="grid">
         <div class="cntr">
-          <img src="./img/hey.png" style="width: 60%;" />
+          <img src="./img/telecommuting.png" style="width: 50%;" />
         </div>
         <div class="cntr">
+          <br />
           <h1 class="title">Our Goal</h1>
-        </div>
-        <div class="cntr">
-          <h1 class="title">How</h1>
-        </div>
-        <div class="cntr">
-          <img src="./img/workfromhome.png" style="width: 60%;" />
+          <br />
+          <p>
+            We aim to reach out to the people in the society whose voices are
+            unheard and unsaid at the time of the pandemic. With our
+            user-friendly interface, we are here to provide all the care you
+            need within the four walls of your room by just clicking a few
+            buttons.REMEMBER YOU ARE NOT ALONE AND WE CAN GET YOU THROUGH THIS!
+          </p>
         </div>
       </div>
-       </div>
-    </body>
-    
+    </div>
   </body>
 </html>
